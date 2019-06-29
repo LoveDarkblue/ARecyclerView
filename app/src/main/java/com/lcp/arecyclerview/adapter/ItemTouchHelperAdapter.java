@@ -37,7 +37,11 @@ public class ItemTouchHelperAdapter extends BaseAdapter<String> implements MyIte
         if (adapterPosition1 <= 2) {//例如设置position小于2的item不让换
             return false;
         }
-        Collections.swap(mDatas, adapterPosition, adapterPosition1);
+        if (getHeaderViewCount() > 0) {
+            Collections.swap(mDatas, adapterPosition - 1, adapterPosition1 - 1);
+        } else {
+            Collections.swap(mDatas, adapterPosition, adapterPosition1);
+        }
         notifyItemMoved(adapterPosition, adapterPosition1);
         return true;
     }
@@ -45,8 +49,8 @@ public class ItemTouchHelperAdapter extends BaseAdapter<String> implements MyIte
     @Override
     public void onSwiped(RecyclerView.ViewHolder viewHolder) {
         int adapterPosition = viewHolder.getAdapterPosition();
-        notifyItemRemoved(adapterPosition);
         mDatas.remove(getHeaderViewCount() > 0 ? adapterPosition - 1 : adapterPosition);
+        notifyItemRemoved(adapterPosition);
         //为了防止删到不满一屏时加载更多的item出现
         hiddenFooterView();
     }
