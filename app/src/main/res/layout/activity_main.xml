@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/bt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="listMore"
+        android:text="list more"/>
+
+    <Button
+        android:id="@+id/bt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="gridMore"
+        app:layout_constraintTop_toBottomOf="@id/bt1"
+        android:text="grid more"/>
+
+
+    <Button
+        android:id="@+id/bt3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="listMore2"
+        app:layout_constraintLeft_toRightOf="@id/bt1"
+        android:text="list more2"/>
+
+    <Button
+        android:id="@+id/bt4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="gridMore2"
+        app:layout_constraintLeft_toRightOf="@id/bt1"
+        app:layout_constraintTop_toBottomOf="@id/bt3"
+        android:text="grid more2"/>
+
+    <Button
+        android:id="@+id/bt5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="header"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bt2"
+        android:text="header"/>
+
+    <Button
+        android:id="@+id/bt6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="scroller"
+        app:layout_constraintLeft_toRightOf="@id/bt5"
+        app:layout_constraintTop_toBottomOf="@id/bt4"
+        android:text="scroller"/>
+
+    <Button
+        android:id="@+id/bt7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="itemTouchHelper"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bt5"
+        android:text="itemTouchHelper"/>
+
+</android.support.constraint.ConstraintLayout>

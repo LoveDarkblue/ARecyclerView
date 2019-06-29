@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:duration="100"
+        android:drawable="@mipmap/horse1" />
+    <item
+        android:duration="100"
+        android:drawable="@mipmap/horse2" />
+    <item
+        android:duration="100"
+        android:drawable="@mipmap/horse3" />
+    <item
+        android:duration="100"
+        android:drawable="@mipmap/horse4" />
+    <item
+        android:duration="100"
+        android:drawable="@mipmap/horse5" />
+    <item
+        android:duration="100"
+        android:drawable="@mipmap/horse6" />
+    <item
+        android:duration="100"
+        android:drawable="@mipmap/horse7" />
+    <item
+        android:duration="100"
+        android:drawable="@mipmap/horse8" />
+</animation-list>
