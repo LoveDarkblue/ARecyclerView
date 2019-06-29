@@ -33,7 +33,7 @@ public class ItemTouchHelperAdapter extends BaseAdapter<String> implements MyIte
     @Override
     public boolean onMove(RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
         int adapterPosition = viewHolder.getAdapterPosition();
-        int adapterPosition1 = getHeaderViewCount() > 0 ? target.getAdapterPosition() - 1 : target.getAdapterPosition();
+        int adapterPosition1 = target.getAdapterPosition();
         if (adapterPosition1 <= 2) {//例如设置position小于2的item不让换
             return false;
         }
